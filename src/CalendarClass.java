@@ -2,8 +2,11 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -25,22 +28,32 @@ public class CalendarClass {
     public static class StatusColumnCellRenderer extends DefaultTableCellRenderer {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int col) {
-        //Cells are by default rendered as a JLabel.
         JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
-        //Get the status for the current row.
-        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
 
-        //Return the JLabel which renders the cell.
-        if(col==0){
-            l.setBackground(Color.RED);
-            l.setForeground(Color.yellow);
-        }else if(col==6){
-            l.setBackground(Color.ORANGE);l.setForeground(Color.BLACK);
+        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
+        SimpleDateFormat sdf=new SimpleDateFormat("dd/MMM/yyyy");
+        long date=System.currentTimeMillis();
+        String m=sdf.format(date);
+        String[] ms=m.split("/");
+        Object value2=((Calendar.getInstance()).get(Calendar.DATE));
+        if(isCurrentYear&&(table.getName() == null ? ms[1] == null : table.getName().equalsIgnoreCase(ms[1]))&&value==value2){      
+                    l.setBackground(Color.green);
+                    l.setForeground(Color.RED.darker());                
+        }else{
+            if(col==0){
+                l.setBackground(Color.RED);
+                l.setForeground(Color.yellow);
+            }else if(col==6){
+                l.setBackground(Color.ORANGE);l.setForeground(Color.BLACK);
+            }else{
+                l.setBackground(new JLabel().getBackground());
+                l.setForeground(new JLabel().getForeground());
+            }
         }
-        if(isSelected){
-            l.setFont(new Font("Serif", Font.BOLD, 18));
-        }
-        return l;
+            if(isSelected){
+                l.setFont(new Font("Serif", Font.BOLD, 18));
+            }
+            return l;
     }
 }
     public static DefaultTableCellRenderer RenderHeaderColor(Color c){

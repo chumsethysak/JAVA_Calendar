@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.Calendar;
+import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 /*
@@ -42,12 +43,11 @@ public class frmCalendar extends javax.swing.JFrame {
                         for(JTable TemTbl:tblMonths)
                             if(TemTbl!=tbl)
                                 TemTbl.clearSelection();
-                    }     
+                    }
                 }
 
                 @Override
-                public void mouseReleased(MouseEvent me) {
-                    
+                public void mouseReleased(MouseEvent me) {                   
                 }
 
                 @Override
@@ -582,6 +582,8 @@ public class frmCalendar extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 Calendar c=Calendar.getInstance();
 Boolean firstForm=true;
+JTable[] tblMonths;
+JTable selectedTable;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         c=Calendar.getInstance();
@@ -592,7 +594,7 @@ Boolean firstForm=true;
         firstForm=false;
         cbxYear.setSelectedIndex(200);
     }//GEN-LAST:event_formWindowOpened
-    JTable[] tblMonths;
+    
     private void cbxYearItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxYearItemStateChanged
         // TODO add your handling code here:
         if(firstForm)return;
