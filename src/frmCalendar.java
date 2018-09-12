@@ -1,21 +1,9 @@
 
 import java.awt.Color;
-import java.awt.Component;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.Calendar;
-import java.util.Date;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
-import javax.swing.border.Border;
-import javax.swing.event.PopupMenuEvent;
-import javax.swing.event.PopupMenuListener;
-import javax.swing.table.DefaultTableCellRenderer;
-import javax.swing.table.DefaultTableColumnModel;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumn;
-import sun.swing.table.DefaultTableCellHeaderRenderer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -36,11 +24,41 @@ public class frmCalendar extends javax.swing.JFrame {
         initComponents();
         tblMonths=new JTable[]{tblJan,tblFeb,tblMarch,tblApril,tblMay,tblJune,tblJuly,tblAugust,tblSeptember,tblOctober,tblNovember,tblDecember};
         for(JTable tbl:tblMonths){
-            tbl.getColumnModel().getColumn(0).setCellRenderer(new CalendarClass.StatusColumnCellRenderer());
-            DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
-            headerRenderer.setBackground(Color.RED.darker());           
-            tbl.getColumnModel().getColumn(0).setHeaderRenderer(headerRenderer);
-        }           
+            for(int i=0;i<tbl.getColumnCount();i++)
+                tbl.getColumnModel().getColumn(i).setCellRenderer(new CalendarClass.StatusColumnCellRenderer());                   
+            tbl.getColumnModel().getColumn(0).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.red.darker()));
+            tbl.getColumnModel().getColumn(6).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.ORANGE.darker()));
+            
+            tbl.addMouseListener(new MouseListener() {
+                @Override
+                public void mouseClicked(MouseEvent me) {                   
+                }
+
+                @Override
+                public void mousePressed(MouseEvent me) {
+                    int row=tbl.getSelectedRow();
+                    int col=tbl.getSelectedColumn();
+                    if(row!=-1&&col!=-1){
+                        for(JTable TemTbl:tblMonths)
+                            if(TemTbl!=tbl)
+                                TemTbl.clearSelection();
+                    }     
+                }
+
+                @Override
+                public void mouseReleased(MouseEvent me) {
+                    
+                }
+
+                @Override
+                public void mouseEntered(MouseEvent me) {
+                }
+
+                @Override
+                public void mouseExited(MouseEvent me) {
+                }
+            });
+        }
     }
 
     /**
@@ -52,6 +70,7 @@ public class frmCalendar extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         cbxYear = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblJan = new javax.swing.JTable();
@@ -178,6 +197,7 @@ public class frmCalendar extends javax.swing.JFrame {
         });
         tblMarch.setCellSelectionEnabled(true);
         tblMarch.setName("MAR"); // NOI18N
+        tblMarch.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane3.setViewportView(tblMarch);
 
         tblJune.setModel(new javax.swing.table.DefaultTableModel(
@@ -577,24 +597,13 @@ Boolean firstForm=true;
         // TODO add your handling code here:
         if(firstForm)return;
         c.set(Integer.valueOf(cbxYear.getSelectedItem()+""), 1, 1);    
+        CalendarClass.isCurrentYear=(c.get(Calendar.YEAR)==(Calendar.getInstance()).get(Calendar.YEAR));
         for(int i=0;i<tblMonths.length;i++){
             CalendarClass.addDaysToTableMonths(c.get(Calendar.YEAR)+"", tblMonths[i],i);
             tblMonths[i].setSelectionMode(0);
         }
-        
-        int tyear=(Calendar.getInstance()).get(Calendar.YEAR);
-        int tmonth=(Calendar.getInstance()).get(Calendar.MONTH);
-        Object tday=(Calendar.getInstance()).get(Calendar.DAY_OF_MONTH);
-        int tdate=(Calendar.getInstance()).get(Calendar.DAY_OF_WEEK)-1;
-        
-        if(c.get(Calendar.YEAR)==(Calendar.getInstance()).get(Calendar.YEAR)){
-            for(int i=0;i<tblMonths[tmonth].getRowCount();i++){//JOptionPane.showMessageDialog(this, tblMonths[tmonth].getValueAt(i, tdate));
-                if(tblMonths[tmonth].getValueAt(i, tdate)==tday){
-                    
-                }
-            }
-        }
     }//GEN-LAST:event_cbxYearItemStateChanged
+
 
     /**
      * @param args the command line arguments
@@ -632,6 +641,7 @@ Boolean firstForm=true;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbxYear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

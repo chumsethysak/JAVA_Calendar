@@ -1,6 +1,7 @@
 
 import java.awt.Color;
 import java.awt.Component;
+import java.awt.Font;
 import java.util.Calendar;
 import javax.swing.JLabel;
 import javax.swing.JTable;
@@ -20,7 +21,7 @@ import javax.swing.table.TableCellRenderer;
  */
 
 public class CalendarClass {
-    
+    public static Boolean isCurrentYear=false;
     public static class StatusColumnCellRenderer extends DefaultTableCellRenderer {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int col) {
@@ -28,14 +29,26 @@ public class CalendarClass {
         JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
         //Get the status for the current row.
         DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
-        l.setBackground(Color.RED);
+
         //Return the JLabel which renders the cell.
+        if(col==0){
+            l.setBackground(Color.RED);
+            l.setForeground(Color.yellow);
+        }else if(col==6){
+            l.setBackground(Color.ORANGE);l.setForeground(Color.BLACK);
+        }
+        if(isSelected){
+            l.setFont(new Font("Serif", Font.BOLD, 18));
+        }
         return l;
     }
 }
+    public static DefaultTableCellRenderer RenderHeaderColor(Color c){
+            DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
+            headerRenderer.setBackground(c);
+            return headerRenderer;
+    }
 
-
-    
     public static void addDaysToTableMonths(String Year,JTable tblMonth,int mIndex){  
         Calendar c=Calendar.getInstance();
         int year=Integer.valueOf(Year);
