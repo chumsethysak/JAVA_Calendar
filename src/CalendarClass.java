@@ -37,8 +37,9 @@ public class CalendarClass {
         String[] ms=m.split("/");
         Object value2=((Calendar.getInstance()).get(Calendar.DATE));
         if(isCurrentYear&&(table.getName() == null ? ms[1] == null : table.getName().equalsIgnoreCase(ms[1]))&&value==value2){      
-                    l.setBackground(Color.green);
-                    l.setForeground(Color.RED.darker());                
+                    l.setBackground(Color.BLUE);
+                    l.setForeground(Color.WHITE);
+                    table.isCellSelected(row, col);
         }else{
             if(col==0){
                 l.setBackground(Color.RED);
@@ -53,7 +54,8 @@ public class CalendarClass {
         
            if(isSelected){
                 l.setFont(new Font("Serif", Font.BOLD, 18));
-                l.setBackground(Color.CYAN);
+                l.setBackground(Color.BLUE.brighter());
+                l.setForeground(Color.WHITE);
                 if(value==null)
                         l.setBackground(Color.WHITE);     
             }else{
