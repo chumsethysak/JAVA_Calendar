@@ -50,8 +50,19 @@ public class CalendarClass {
                 l.setForeground(new JLabel().getForeground());
             }
         }
-            if(isSelected){
+        
+           if(isSelected){
                 l.setFont(new Font("Serif", Font.BOLD, 18));
+                l.setBackground(Color.CYAN);
+                if(value==null)
+                        l.setBackground(Color.WHITE);     
+            }else{
+                if(col!=0&&col!=6){
+                    if(!(isCurrentYear&&(table.getName() == null ? ms[1] == null : table.getName().equalsIgnoreCase(ms[1]))&&value==value2)){
+                        l.setFont(new JLabel().getFont());
+                        l.setBackground(new JLabel().getBackground());
+                    }
+                }
             }
             return l;
     }
