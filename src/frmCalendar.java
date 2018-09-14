@@ -34,17 +34,19 @@ public class frmCalendar extends javax.swing.JFrame {
             
             tbl.addMouseListener(new MouseListener() {
                 @Override
-                public void mouseClicked(MouseEvent me) {                   
+                public void mouseClicked(MouseEvent me) {              
                 }
 
                 @Override
                 public void mousePressed(MouseEvent me) {
-                    int row=tbl.getSelectedRow();
-                    int col=tbl.getSelectedColumn();
-                    if(row!=-1&&col!=-1){
-                        for(JTable TemTbl:tblMonths)
-                            if(TemTbl!=tbl)
-                                TemTbl.clearSelection();
+                    if(selectedTable==tbl&&countUnfocused<12){
+                        int row=tbl.getSelectedRow();
+                        int col=tbl.getSelectedColumn();
+                        if(row!=-1&&col!=-1){
+                            for(JTable TemTbl:tblMonths)
+                                if(TemTbl!=tbl)
+                                    TemTbl.clearSelection();
+                        }
                     }
                 }
 
@@ -54,10 +56,13 @@ public class frmCalendar extends javax.swing.JFrame {
 
                 @Override
                 public void mouseEntered(MouseEvent me) {
+                    selectedTable=tbl;
+                    countUnfocused--;
                 }
 
                 @Override
                 public void mouseExited(MouseEvent me) {
+                    countUnfocused++;
                 }
             });
         }
@@ -586,6 +591,7 @@ Calendar c=Calendar.getInstance();
 Boolean firstForm=true;
 JTable[] tblMonths;
 JTable selectedTable;
+int countUnfocused=0;
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         // TODO add your handling code here:
         c=Calendar.getInstance();
