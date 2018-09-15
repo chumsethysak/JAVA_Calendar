@@ -611,6 +611,7 @@ int countUnfocused=0;
         for(int i=0;i<tblMonths.length;i++){
             CalendarClass.addDaysToTableMonths(c.get(Calendar.YEAR)+"", tblMonths[i],i);
             tblMonths[i].setSelectionMode(0);
+            tblMonths[i].getTableHeader().setReorderingAllowed(false);
         }
     }//GEN-LAST:event_cbxYearItemStateChanged
 
