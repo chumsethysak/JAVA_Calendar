@@ -235,8 +235,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblFeb">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -263,8 +271,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblMarch">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="MAR" noResource="true"/>
@@ -288,8 +304,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblJune">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="JUN" noResource="true"/>
@@ -310,8 +334,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblMay">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="MAY" noResource="true"/>
@@ -332,8 +364,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblApril">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="APR" noResource="true"/>
@@ -354,8 +394,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblSeptember">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="SEP" noResource="true"/>
@@ -376,8 +424,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblAugust">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="AUG" noResource="true"/>
@@ -398,8 +454,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblJuly">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="JUL" noResource="true"/>
@@ -420,8 +484,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblDecember">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="Dec" noResource="true"/>
@@ -442,8 +514,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblNovember">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="Nov" noResource="true"/>
@@ -464,8 +544,16 @@
       <SubComponents>
         <Component class="javax.swing.JTable" name="tblOctober">
           <Properties>
-            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-              <Connection component="tblJan" name="model" type="property"/>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="7" rowCount="6">
+                <Column editable="false" title="SU" type="java.lang.Object"/>
+                <Column editable="false" title="MO" type="java.lang.Object"/>
+                <Column editable="false" title="TU" type="java.lang.Object"/>
+                <Column editable="false" title="WE" type="java.lang.Object"/>
+                <Column editable="false" title="TH" type="java.lang.Object"/>
+                <Column editable="false" title="FR" type="java.lang.Object"/>
+                <Column editable="false" title="SA" type="java.lang.Object"/>
+              </Table>
             </Property>
             <Property name="cellSelectionEnabled" type="boolean" value="true"/>
             <Property name="name" type="java.lang.String" value="OCT" noResource="true"/>

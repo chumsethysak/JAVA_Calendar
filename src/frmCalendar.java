@@ -165,7 +165,27 @@ public class frmCalendar extends javax.swing.JFrame {
         tblJan.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane1.setViewportView(tblJan);
 
-        tblFeb.setModel(tblJan.getModel());
+        tblFeb.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblFeb.setCellSelectionEnabled(true);
         tblFeb.setMinimumSize(new java.awt.Dimension(150, 180));
         tblFeb.setName("FEB"); // NOI18N
@@ -174,7 +194,27 @@ public class frmCalendar extends javax.swing.JFrame {
         tblFeb.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(tblFeb);
 
-        tblMarch.setModel(tblJan.getModel());
+        tblMarch.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblMarch.setCellSelectionEnabled(true);
         tblMarch.setName("MAR"); // NOI18N
         tblMarch.setPreferredSize(tblJan.getPreferredSize());
@@ -182,63 +222,243 @@ public class frmCalendar extends javax.swing.JFrame {
         tblMarch.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane3.setViewportView(tblMarch);
 
-        tblJune.setModel(tblJan.getModel());
+        tblJune.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblJune.setCellSelectionEnabled(true);
         tblJune.setName("JUN"); // NOI18N
         tblJune.setPreferredSize(tblJan.getPreferredSize());
         tblJune.setRowHeight(18);
         jScrollPane4.setViewportView(tblJune);
 
-        tblMay.setModel(tblJan.getModel());
+        tblMay.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblMay.setCellSelectionEnabled(true);
         tblMay.setName("MAY"); // NOI18N
         tblMay.setPreferredSize(tblJan.getPreferredSize());
         tblMay.setRowHeight(18);
         jScrollPane5.setViewportView(tblMay);
 
-        tblApril.setModel(tblJan.getModel());
+        tblApril.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblApril.setCellSelectionEnabled(true);
         tblApril.setName("APR"); // NOI18N
         tblApril.setPreferredSize(tblJan.getPreferredSize());
         tblApril.setRowHeight(18);
         jScrollPane6.setViewportView(tblApril);
 
-        tblSeptember.setModel(tblJan.getModel());
+        tblSeptember.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblSeptember.setCellSelectionEnabled(true);
         tblSeptember.setName("SEP"); // NOI18N
         tblSeptember.setPreferredSize(tblJan.getPreferredSize());
         tblSeptember.setRowHeight(18);
         jScrollPane7.setViewportView(tblSeptember);
 
-        tblAugust.setModel(tblJan.getModel());
+        tblAugust.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblAugust.setCellSelectionEnabled(true);
         tblAugust.setName("AUG"); // NOI18N
         tblAugust.setPreferredSize(tblJan.getPreferredSize());
         tblAugust.setRowHeight(18);
         jScrollPane8.setViewportView(tblAugust);
 
-        tblJuly.setModel(tblJan.getModel());
+        tblJuly.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblJuly.setCellSelectionEnabled(true);
         tblJuly.setName("JUL"); // NOI18N
         tblJuly.setPreferredSize(tblJan.getPreferredSize());
         tblJuly.setRowHeight(18);
         jScrollPane9.setViewportView(tblJuly);
 
-        tblDecember.setModel(tblJan.getModel());
+        tblDecember.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblDecember.setCellSelectionEnabled(true);
         tblDecember.setName("Dec"); // NOI18N
         tblDecember.setPreferredSize(tblJan.getPreferredSize());
         tblDecember.setRowHeight(18);
         jScrollPane10.setViewportView(tblDecember);
 
-        tblNovember.setModel(tblJan.getModel());
+        tblNovember.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblNovember.setCellSelectionEnabled(true);
         tblNovember.setName("Nov"); // NOI18N
         tblNovember.setPreferredSize(tblJan.getPreferredSize());
         tblNovember.setRowHeight(18);
         jScrollPane11.setViewportView(tblNovember);
 
-        tblOctober.setModel(tblJan.getModel());
+        tblOctober.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         tblOctober.setCellSelectionEnabled(true);
         tblOctober.setName("OCT"); // NOI18N
         tblOctober.setPreferredSize(tblJan.getPreferredSize());
@@ -446,7 +666,6 @@ int countUnfocused=0;
         for(int i=0;i<tblMonths.length;i++){
             CalendarClass.addDaysToTableMonths(c.get(Calendar.YEAR)+"", tblMonths[i],i);
             tblMonths[i].setSelectionMode(0);
-            tblMonths[i].getTableHeader().setReorderingAllowed(false);
         }
     }//GEN-LAST:event_cbxYearItemStateChanged
 
