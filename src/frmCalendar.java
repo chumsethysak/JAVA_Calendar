@@ -31,6 +31,8 @@ public class frmCalendar extends javax.swing.JFrame {
                 tbl.getColumnModel().getColumn(i).setCellRenderer(new CalendarClass.StatusColumnCellRenderer());                   
             tbl.getColumnModel().getColumn(0).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.red.darker()));
             tbl.getColumnModel().getColumn(6).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.ORANGE.darker()));
+            tbl.getTableHeader().setReorderingAllowed(false);
+            tbl.getTableHeader().setResizingAllowed(false);
             
             tbl.addMouseListener(new MouseListener() {
                 @Override
