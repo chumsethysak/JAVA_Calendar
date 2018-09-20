@@ -2,6 +2,9 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -70,6 +73,7 @@ public class CalendarClass {
     public static DefaultTableCellRenderer RenderHeaderColor(Color c){
             DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
             headerRenderer.setBackground(c);
+            headerRenderer.setForeground(Color.WHITE);
             return headerRenderer;
     }
 
