@@ -2,6 +2,13 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+            <file>file:/D:/Team%20Project/JAVA_Calendar/src/frmCalendar.java</file>
+            <file>file:/D:/Team%20Project/JAVA_Calendar/src/CalendarClass.java</file>
+        </group>
+>>>>>>> 777f5a9608de5167a9cd95685f812f4e2252d44e
     </open-files>
 </project-private>

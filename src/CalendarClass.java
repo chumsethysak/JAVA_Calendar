@@ -2,6 +2,9 @@
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -29,33 +32,31 @@ public class CalendarClass {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int col) {
         JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
-
-        DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
+       // DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
         SimpleDateFormat sdf=new SimpleDateFormat("dd/MMM/yyyy");
         long date=System.currentTimeMillis();
         String m=sdf.format(date);
         String[] ms=m.split("/");
         Object value2=((Calendar.getInstance()).get(Calendar.DATE));
-        if(isCurrentYear&&(table.getName() == null ? ms[1] == null : table.getName().equalsIgnoreCase(ms[1]))&&value==value2){      
-                    l.setBackground(Color.BLUE);
-                    l.setForeground(Color.WHITE);
-                    table.isCellSelected(row, col);
-        }else{
-            if(col==0){
-                l.setBackground(Color.RED);
-                l.setForeground(Color.yellow);
-            }else if(col==6){
-                l.setBackground(Color.ORANGE);l.setForeground(Color.BLACK);
+            if(isCurrentYear&&(table.getName() == null ? ms[1] == null : table.getName().equalsIgnoreCase(ms[1]))&&value==value2){      
+                        l.setBackground(Color.BLUE);
+                        l.setForeground(Color.WHITE);
+                        table.isCellSelected(row, col);
             }else{
-                l.setBackground(new JLabel().getBackground());
-                l.setForeground(new JLabel().getForeground());
+                if(col==0){
+                    l.setBackground(Color.RED);
+                    l.setForeground(Color.yellow);
+                }else if(col==6){
+                    l.setBackground(Color.ORANGE);l.setForeground(Color.BLACK);
+                }else{
+                    l.setBackground(new JLabel().getBackground());
+                    l.setForeground(new JLabel().getForeground());
+                }
             }
-        }
-        
            if(isSelected){
                 l.setFont(new Font("Serif", Font.BOLD, 18));
-                l.setBackground(Color.BLUE.brighter());
-                l.setForeground(Color.WHITE);
+                l.setBackground(Color.CYAN);
+                l.setForeground(Color.green.darker());
                 if(value==null)
                         l.setBackground(Color.WHITE);     
             }else{
@@ -72,7 +73,13 @@ public class CalendarClass {
     public static DefaultTableCellRenderer RenderHeaderColor(Color c){
             DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
             headerRenderer.setBackground(c);
+            headerRenderer.setForeground(Color.WHITE);
             return headerRenderer;
+    }
+    public static DefaultTableCellRenderer RenderAlign(){
+        DefaultTableCellRenderer Align = new DefaultTableCellRenderer();
+        Align.setHorizontalAlignment(JLabel.CENTER);
+        return Align;
     }
 
     public static void addDaysToTableMonths(String Year,JTable tblMonth,int mIndex){  
