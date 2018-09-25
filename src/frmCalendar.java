@@ -30,14 +30,20 @@ public class frmCalendar extends javax.swing.JFrame {
         this.setVisible(true);
         this.setResizable(false);
         tblMonths=new JTable[]{tblJan,tblFeb,tblMarch,tblApril,tblMay,tblJune,tblJuly,tblAugust,tblSeptember,tblOctober,tblNovember,tblDecember};
+
         for(JTable tbl:tblMonths){
             for(int i=0;i<tbl.getColumnCount();i++){
-                tbl.getColumnModel().getColumn(i).setCellRenderer(new CalendarClass.StatusColumnCellRenderer());                
+                
+                tbl.getColumnModel().getColumn(i).setCellRenderer(new CalendarClass.StatusColumnCellRenderer());      
             }
+           
             tbl.getColumnModel().getColumn(0).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.red.darker()));
-            tbl.getColumnModel().getColumn(6).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.ORANGE.darker()));
-            for(int i=1;i<6;i++)
-                tbl.getColumnModel().getColumn(i).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.CYAN.darker()));
+            tbl.getColumnModel().getColumn(6).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.ORANGE));
+            for(int i=1;i<6;i++){
+           tbl.getColumnModel().getColumn(i).setHeaderRenderer(CalendarClass.RenderHeaderColor(Color.GREEN.darker()));
+            
+            }
+
             tbl.getTableHeader().setReorderingAllowed(false);
             tbl.getTableHeader().setResizingAllowed(false);
             
@@ -140,6 +146,7 @@ public class frmCalendar extends javax.swing.JFrame {
             }
         });
 
+        tblJan.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblJan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -150,7 +157,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -162,11 +169,15 @@ public class frmCalendar extends javax.swing.JFrame {
             }
         });
         tblJan.setCellSelectionEnabled(true);
+        tblJan.setDropMode(javax.swing.DropMode.ON);
         tblJan.setName("JAN"); // NOI18N
-        tblJan.setRowHeight(18);
+        tblJan.setRowHeight(20);
         tblJan.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        tblJan.getTableHeader().setResizingAllowed(false);
+        tblJan.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(tblJan);
 
+        tblFeb.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblFeb.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -177,7 +188,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -191,11 +202,12 @@ public class frmCalendar extends javax.swing.JFrame {
         tblFeb.setCellSelectionEnabled(true);
         tblFeb.setMinimumSize(new java.awt.Dimension(150, 180));
         tblFeb.setName("FEB"); // NOI18N
-        tblFeb.setPreferredSize(tblJan.getPreferredSize());
-        tblFeb.setRowHeight(18);
+        tblFeb.setPreferredSize(new java.awt.Dimension(525, 120));
+        tblFeb.setRowHeight(20);
         tblFeb.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane2.setViewportView(tblFeb);
 
+        tblMarch.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblMarch.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -206,7 +218,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -220,10 +232,11 @@ public class frmCalendar extends javax.swing.JFrame {
         tblMarch.setCellSelectionEnabled(true);
         tblMarch.setName("MAR"); // NOI18N
         tblMarch.setPreferredSize(tblJan.getPreferredSize());
-        tblMarch.setRowHeight(18);
+        tblMarch.setRowHeight(20);
         tblMarch.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
         jScrollPane3.setViewportView(tblMarch);
 
+        tblJune.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblJune.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -234,7 +247,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -247,10 +260,11 @@ public class frmCalendar extends javax.swing.JFrame {
         });
         tblJune.setCellSelectionEnabled(true);
         tblJune.setName("JUN"); // NOI18N
-        tblJune.setPreferredSize(tblJan.getPreferredSize());
-        tblJune.setRowHeight(18);
+        tblJune.setPreferredSize(new java.awt.Dimension(525, 120));
+        tblJune.setRowHeight(20);
         jScrollPane4.setViewportView(tblJune);
 
+        tblMay.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblMay.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -261,7 +275,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -275,9 +289,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblMay.setCellSelectionEnabled(true);
         tblMay.setName("MAY"); // NOI18N
         tblMay.setPreferredSize(tblJan.getPreferredSize());
-        tblMay.setRowHeight(18);
+        tblMay.setRowHeight(20);
         jScrollPane5.setViewportView(tblMay);
 
+        tblApril.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblApril.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -288,7 +303,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាតិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -302,9 +317,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblApril.setCellSelectionEnabled(true);
         tblApril.setName("APR"); // NOI18N
         tblApril.setPreferredSize(tblJan.getPreferredSize());
-        tblApril.setRowHeight(18);
+        tblApril.setRowHeight(20);
         jScrollPane6.setViewportView(tblApril);
 
+        tblSeptember.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblSeptember.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -315,7 +331,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -329,9 +345,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblSeptember.setCellSelectionEnabled(true);
         tblSeptember.setName("SEP"); // NOI18N
         tblSeptember.setPreferredSize(tblJan.getPreferredSize());
-        tblSeptember.setRowHeight(18);
+        tblSeptember.setRowHeight(20);
         jScrollPane7.setViewportView(tblSeptember);
 
+        tblAugust.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblAugust.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -342,7 +359,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -356,9 +373,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblAugust.setCellSelectionEnabled(true);
         tblAugust.setName("AUG"); // NOI18N
         tblAugust.setPreferredSize(tblJan.getPreferredSize());
-        tblAugust.setRowHeight(18);
+        tblAugust.setRowHeight(20);
         jScrollPane8.setViewportView(tblAugust);
 
+        tblJuly.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblJuly.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -369,7 +387,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -382,10 +400,11 @@ public class frmCalendar extends javax.swing.JFrame {
         });
         tblJuly.setCellSelectionEnabled(true);
         tblJuly.setName("JUL"); // NOI18N
-        tblJuly.setPreferredSize(tblJan.getPreferredSize());
-        tblJuly.setRowHeight(18);
+        tblJuly.setPreferredSize(new java.awt.Dimension(525, 120));
+        tblJuly.setRowHeight(20);
         jScrollPane9.setViewportView(tblJuly);
 
+        tblDecember.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblDecember.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -396,7 +415,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -410,9 +429,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblDecember.setCellSelectionEnabled(true);
         tblDecember.setName("Dec"); // NOI18N
         tblDecember.setPreferredSize(tblJan.getPreferredSize());
-        tblDecember.setRowHeight(18);
+        tblDecember.setRowHeight(20);
         jScrollPane10.setViewportView(tblDecember);
 
+        tblNovember.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblNovember.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -423,7 +443,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -437,9 +457,10 @@ public class frmCalendar extends javax.swing.JFrame {
         tblNovember.setCellSelectionEnabled(true);
         tblNovember.setName("Nov"); // NOI18N
         tblNovember.setPreferredSize(tblJan.getPreferredSize());
-        tblNovember.setRowHeight(18);
+        tblNovember.setRowHeight(20);
         jScrollPane11.setViewportView(tblNovember);
 
+        tblOctober.setFont(new java.awt.Font("Khmer OS", 0, 12)); // NOI18N
         tblOctober.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null},
@@ -450,7 +471,7 @@ public class frmCalendar extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null}
             },
             new String [] {
-                "SU", "MO", "TU", "WE", "TH", "FR", "SA"
+                "អាទិ", "ច័ន្ទ", "អង្គារ", "ពុធ", "ព្រហ.", "សុក្រ", "សៅរ៍"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -464,178 +485,180 @@ public class frmCalendar extends javax.swing.JFrame {
         tblOctober.setCellSelectionEnabled(true);
         tblOctober.setName("OCT"); // NOI18N
         tblOctober.setPreferredSize(tblJan.getPreferredSize());
-        tblOctober.setRowHeight(18);
+        tblOctober.setRowHeight(20);
         jScrollPane12.setViewportView(tblOctober);
 
         jLabel1.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel1.setForeground(new java.awt.Color(51, 102, 0));
         jLabel1.setText("មីនា");
 
         jLabel2.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel2.setForeground(new java.awt.Color(51, 102, 0));
         jLabel2.setText("មករា");
 
         jLabel3.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel3.setForeground(new java.awt.Color(51, 102, 0));
         jLabel3.setText("កុម្ភៈ");
 
         jLabel4.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel4.setForeground(new java.awt.Color(51, 102, 0));
         jLabel4.setText("កក្កដា");
 
         jLabel5.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel5.setForeground(new java.awt.Color(51, 102, 0));
         jLabel5.setText("មិថុនា");
 
         jLabel6.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel6.setForeground(new java.awt.Color(51, 102, 0));
         jLabel6.setText("ឧសភា");
 
         jLabel7.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel7.setForeground(new java.awt.Color(51, 102, 0));
         jLabel7.setText("មេសា");
 
         jLabel8.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel8.setForeground(new java.awt.Color(51, 102, 0));
         jLabel8.setText("កញ្ញា");
 
         jLabel9.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel9.setForeground(new java.awt.Color(51, 102, 0));
         jLabel9.setText("សីហា");
 
         jLabel10.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel10.setForeground(new java.awt.Color(51, 102, 0));
         jLabel10.setText("ធ្នូ");
 
         jLabel11.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel11.setForeground(new java.awt.Color(51, 102, 0));
         jLabel11.setText("វិច្ឆិកា");
 
         jLabel12.setFont(new java.awt.Font("Khmer OS Muol", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(102, 153, 0));
+        jLabel12.setForeground(new java.awt.Color(51, 102, 0));
         jLabel12.setText("តុលា");
 
-        jLabel13.setText("jLabel13");
+        jLabel13.setFont(new java.awt.Font("Khmer Rotanak Angkor", 0, 48)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(229, 229, 229)
-                        .addComponent(jLabel8)
-                        .addGap(228, 228, 228)
-                        .addComponent(jLabel12)
-                        .addGap(229, 229, 229)
-                        .addComponent(jLabel11)
-                        .addGap(220, 220, 220)
-                        .addComponent(jLabel10))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(366, 366, 366)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 555, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(121, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 354, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 354, Short.MAX_VALUE)
+                            .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(130, 130, 130))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbxYear, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(18, 18, 18)
-                                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(128, 128, 128))))
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.DEFAULT_SIZE, 539, Short.MAX_VALUE)
+                    .addComponent(jScrollPane8)
+                    .addComponent(jScrollPane10))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(226, 226, 226)
+                .addGap(151, 151, 151)
+                .addComponent(jLabel8)
+                .addGap(313, 313, 313)
+                .addComponent(jLabel12)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel11)
+                .addGap(303, 303, 303)
+                .addComponent(jLabel10)
+                .addGap(182, 182, 182))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(151, 151, 151)
+                .addComponent(jLabel6)
+                .addGap(297, 297, 297)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(306, 306, 306)
+                .addComponent(jLabel9)
+                .addGap(151, 151, 151))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(150, 150, 150)
+                .addComponent(jLabel2)
+                .addGap(316, 316, 316)
+                .addComponent(jLabel3)
+                .addGap(359, 359, 359)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(152, 152, 152))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(229, 229, 229)
-                        .addComponent(jLabel3)
-                        .addGap(230, 230, 230)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel7)
-                        .addGap(227, 227, 227))
+                        .addGap(523, 523, 523)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 441, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(218, 218, 218)
-                        .addComponent(jLabel5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel4)
-                        .addGap(222, 222, 222)
-                        .addComponent(jLabel9)
-                        .addGap(228, 228, 228))))
+                        .addGap(688, 688, 688)
+                        .addComponent(cbxYear, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(cbxYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbxYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel5)
                     .addComponent(jLabel9)
                     .addComponent(jLabel4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane9, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 157, Short.MAX_VALUE)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel12)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel12)
+                        .addComponent(jLabel8))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel11)
-                        .addComponent(jLabel10)
-                        .addComponent(jLabel8)))
+                        .addComponent(jLabel10)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane10, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane12, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
+                    .addComponent(jScrollPane7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jScrollPane11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
 
         cbxYear.getAccessibleContext().setAccessibleName("");
@@ -659,18 +682,18 @@ int countUnfocused=0;
         firstForm=false;
         cbxYear.setSelectedIndex(200);
     }//GEN-LAST:event_formWindowOpened
-    
+
     private void cbxYearItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxYearItemStateChanged
         // TODO add your handling code here:
         if(firstForm)return;
-        c.set(Integer.valueOf(cbxYear.getSelectedItem()+""), 1, 1);    
+        c.set(Integer.valueOf(cbxYear.getSelectedItem()+""), 1, 1);
         CalendarClass.isCurrentYear=(c.get(Calendar.YEAR)==(Calendar.getInstance()).get(Calendar.YEAR));
         for(int i=0;i<tblMonths.length;i++){
             CalendarClass.addDaysToTableMonths(c.get(Calendar.YEAR)+"", tblMonths[i],i);
             tblMonths[i].setSelectionMode(0);
         }
     }//GEN-LAST:event_cbxYearItemStateChanged
-
+    
 
     /**
      * @param args the command line arguments

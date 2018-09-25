@@ -55,8 +55,8 @@ public class CalendarClass {
             }
            if(isSelected){
                 l.setFont(new Font("Serif", Font.BOLD, 18));
-                l.setBackground(Color.BLUE.brighter());
-                l.setForeground(Color.WHITE);
+                l.setBackground(Color.CYAN);
+                l.setForeground(Color.green.darker());
                 if(value==null)
                         l.setBackground(Color.WHITE);     
             }else{
@@ -75,6 +75,11 @@ public class CalendarClass {
             headerRenderer.setBackground(c);
             headerRenderer.setForeground(Color.WHITE);
             return headerRenderer;
+    }
+    public static DefaultTableCellRenderer RenderAlign(){
+        DefaultTableCellRenderer Align = new DefaultTableCellRenderer();
+        Align.setHorizontalAlignment(JLabel.CENTER);
+        return Align;
     }
 
     public static void addDaysToTableMonths(String Year,JTable tblMonth,int mIndex){  
