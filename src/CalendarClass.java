@@ -75,6 +75,7 @@ public class CalendarClass {
             DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
             headerRenderer.setBackground(c);
             headerRenderer.setForeground(Color.WHITE);
+            headerRenderer.setHorizontalAlignment(0);
             return headerRenderer;
     }
 
