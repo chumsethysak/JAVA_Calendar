@@ -32,6 +32,7 @@ public class CalendarClass {
     @Override
     public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int col) {
         JLabel l = (JLabel) super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, col);
+        l.setHorizontalAlignment(0);
        // DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
         SimpleDateFormat sdf=new SimpleDateFormat("dd/MMM/yyyy");
         long date=System.currentTimeMillis();
@@ -66,7 +67,7 @@ public class CalendarClass {
                         l.setBackground(new JLabel().getBackground());
                     }
                 }
-            }
+            } 
             return l;
     }
 }
@@ -74,12 +75,8 @@ public class CalendarClass {
             DefaultTableCellRenderer headerRenderer = new DefaultTableCellRenderer();
             headerRenderer.setBackground(c);
             headerRenderer.setForeground(Color.WHITE);
+            headerRenderer.setHorizontalAlignment(0);
             return headerRenderer;
-    }
-    public static DefaultTableCellRenderer RenderAlign(){
-        DefaultTableCellRenderer Align = new DefaultTableCellRenderer();
-        Align.setHorizontalAlignment(JLabel.CENTER);
-        return Align;
     }
 
     public static void addDaysToTableMonths(String Year,JTable tblMonth,int mIndex){  
